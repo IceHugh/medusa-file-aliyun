@@ -11,4 +11,4 @@ Upload files to an Aliyun Oss bucket.
   region: [region of your bucket],
 ```
 
-Follow [this guide](https://docs.medusajs.com/how-to/uploading-images-to-s3) to configure the plugin.
+Follow [this guide](https://github.com/ali-sdk/ali-oss) to configure the plugin.

@@ -1,24 +1,35 @@
 {
   "name": "medusa-file-aliyun",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.8",
+  "description": "aliyun oss for medusa file upload",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IceHugh/medusa-file-aliyun"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config"
+    "build": "rollup --config",
+    "babel": "babel src -d ."
   },
-  "author": "",
-  "license": "ISC",
+  "author": "icehugh",
+  "license": "MIT",
   "peerDependencies": {
-    "medusa-interfaces": "1.x"
+    "medusa-interfaces": "1.x",
+    "ali-oss": "6.x"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-classes": "^7.16.7",
+    "@babel/plugin-transform-instanceof": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^21.0.3",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.1.3",
+    "babel-cli": "7.0.0-beta.3",
     "medusa-test-utils": "^1.1.37",
     "rollup": "^2.70.1",
     "rollup-plugin-terser": "^7.0.2"

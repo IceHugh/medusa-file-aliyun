@@ -10,7 +10,7 @@ export default {
     format: 'cjs',
   },
   plugins: [
-    resulve(),
+    // resulve(),
     commonjs(),
     json(),
     terser(),

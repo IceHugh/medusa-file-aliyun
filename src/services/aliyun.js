@@ -1,11 +1,10 @@
 import fs from 'fs';
 import OSS from 'ali-oss';
 import { FileService } from 'medusa-interfaces';
-
-class AliService extends FileService {
+export default class AliService extends FileService {
   constructor({}, options) {
     super();
-    this.bucket_ = options.bucket;
+    this.bucket = options.bucket;
     this.accessKeyId = options.access_key_id;
     this.accessKeySecret = options.access_key_secret;
     this.region = options.region;
@@ -19,11 +18,10 @@ class AliService extends FileService {
       region,
       bucket,
     });
-    console.log(file);
     const filename = file.originalname;
     return new Promise((resolve, reject) => {
       client
-        .putStream(filename, fs.createReadStream(file.path))
+        .put(filename, fs.createReadStream(file.path))
         .then((data) => {
           resolve({ url: data.url });
         })
@@ -39,7 +37,6 @@ class AliService extends FileService {
       region,
       bucket,
     });
-    console.log(file);
     return new Promise((resolve, reject) => {
       client
         .delete(file)
@@ -51,4 +48,5 @@ class AliService extends FileService {
   }
 }
 
-export default S3Service;
+// export default AliService;
+exports.default = AliService
