@@ -1,6 +1,6 @@
 {
   "name": "medusa-file-aliyun",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "aliyun oss for medusa file upload",
   "main": "index.js",
   "repository": {
